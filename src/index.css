@@ -49,3 +49,6 @@
   color: #f1356d;
   margin-bottom: 10px;
 }
+.book-preview a {
+  text-decoration: none;
+}
