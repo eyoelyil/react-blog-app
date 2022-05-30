@@ -52,3 +52,51 @@
 .book-preview a {
   text-decoration: none;
 }
+
+/* book details page */
+.book-details h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 10px;
+}
+.book-details div {
+  margin-bottom: 20px 0;
+}
+
+/* create book form */
+.create {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.create label {
+  text-align: left;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.create h2 {
+  font-size: 30px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+.create input,
+.create textarea {
+  width: 100%;
+  padding: 6px 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 20px;
+  display: block;
+}
+.create button {
+  padding: 10px;
+  background: #f1356d;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  cursor: pointer;
+}
