@@ -1,15 +1,40 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Create = () => {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [genre, setGenre] = useState("");
   const [content, setContent] = useState("");
+  const [isPending, setIsPending] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const book = {
+      title,
+      author,
+      genre,
+      content,
+    };
+
+    setIsPending(true);
+
+    fetch("http://localhost:8006/books", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(book),
+    }).then(() => {
+      console.log("Book created");
+      setIsPending(false);
+      navigate("/");
+    });
+  };
 
   return (
     <div className="create">
       <h2>Add a new book</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>Book Title</label>
         <input
           type="text"
@@ -41,8 +66,10 @@ const Create = () => {
           value={content}
           onChange={(e) => setContent(e.target.value)}
         ></textarea>
-        <button type="submit">Add Book</button>
+        {!isPending && <button>Add Book</button>}
+        {isPending && <button disabled>Adding book...</button>}
       </form>
+      <p>name</p>
     </div>
   );
 };

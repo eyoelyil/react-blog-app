@@ -3,6 +3,7 @@ import Home from "./Home";
 import Create from "./Create";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import BookDetails from "./BookDetails";
+import NotFound from "./NotFound";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/create" element={<Create />} />
             <Route path="/books/:id" element={<BookDetails />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </div>

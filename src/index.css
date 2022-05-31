@@ -62,7 +62,14 @@
 .book-details div {
   margin-bottom: 20px 0;
 }
-
+.book-details button {
+  background: #f1356d;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
 /* create book form */
 .create {
   max-width: 400px;
@@ -74,6 +81,7 @@
   display: block;
   margin-bottom: 10px;
   font-size: 20px;
+  color: #ec5c87;
 }
 .create h2 {
   font-size: 30px;
@@ -96,7 +104,7 @@
   background: #f1356d;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 20px;
   cursor: pointer;
 }
